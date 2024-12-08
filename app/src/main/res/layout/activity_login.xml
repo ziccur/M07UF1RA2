@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#333333"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background"/>
+
+
+    <!-- Título -->
+
+
+
+    <!-- Icono central -->
+    <ImageView
+        android:id="@+id/centerIcon"
+        android:layout_width="160dp"
+        android:layout_height="144dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleImage"
+        app:srcCompat="@drawable/register_svg" />
+
+    <!-- Botón de Google -->
+    <ImageButton
+        android:id="@+id/googleButton"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="32dp"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/centerIcon"
+        app:srcCompat="@drawable/register_google_button" />
+
+
+
+
+    <!-- Input: Correu -->
+    <EditText
+        android:id="@+id/emailInput"
+        android:fontFamily="@font/worksans"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/register_input_background"
+        android:hint="Correu"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:textColorHint="#808080"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/googleButton" />
+
+    <!-- Input: Contrasenya -->
+    <EditText
+        android:id="@+id/passwordInput"
+        android:fontFamily="@font/worksans"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/register_input_background"
+        android:hint="Contrasenya"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:textColorHint="#808080"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailInput" />
+
+
+    <!-- Botón de Registrar -->
+    <Button
+        android:id="@+id/next_button2"
+        android:fontFamily="@font/worksans"
+        android:textSize="20sp"
+        android:layout_width="273dp"
+        android:layout_height="78dp"
+        android:backgroundTint="#FF3B3B"
+        android:text="Iniciar sessió"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@id/passwordInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/titleImage"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="32dp"
+        android:background="#80D9D9D9"
+        android:backgroundTint="#80D9D9D9"
+        android:fontFamily="@font/worksans"
+        android:hapticFeedbackEnabled="true"
+        android:padding="10dp"
+        android:scaleType="centerCrop"
+        android:textStyle="bold"
+        android:text="Iniciar Sessió"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
